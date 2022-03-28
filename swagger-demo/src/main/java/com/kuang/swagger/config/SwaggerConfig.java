@@ -70,7 +70,7 @@ public class SwaggerConfig {
     // 配置Swagger信息=apiInfo
     private ApiInfo apiInfo() {
         //作者信息
-        Contact contact = new Contact("少司命", "http://www.4399.com", "1600767556@qq.com");
+        Contact contact = new Contact("少司命", "shaoshaossm.github.io", "1600767556@qq.com");
 
         return new ApiInfo(
                 "少司命的SwaggerApi文档"
