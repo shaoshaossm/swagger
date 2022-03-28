@@ -76,7 +76,7 @@ public class SwaggerConfig {
                 "少司命的SwaggerApi文档"
                 , "待厉兵秣马后,就是要逆天而行"
                 , "v1.0"
-                , "https://www.4399.com"
+                , "shaoshaossm.github.io"
                 , contact
                 , "Apach2.0"
                 , "http://www.apache.org/licences/LICENSE-2.0"
