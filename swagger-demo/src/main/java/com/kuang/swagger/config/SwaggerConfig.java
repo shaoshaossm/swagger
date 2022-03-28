@@ -29,7 +29,7 @@ public class SwaggerConfig {
     public Docket docket(Environment environment) {
 
         //设置要显示的Swagger环境
-        Profiles profiles = Profiles.of("dev", "test");
+        Profiles profiles = Profiles.of("dev", "pro");
 
 
         //获取项目环境
@@ -41,6 +41,13 @@ public class SwaggerConfig {
                 .groupName("少司命")
                 .enable(flag) //是否启用swagger
                 .select()
+//        any() // 扫描所有，项目中的所有接口都会被扫描到
+//        none() // 不扫描接口
+//// 通过方法上的注解扫描，如withMethodAnnotation(GetMapping.class)只扫描get请求
+//        withMethodAnnotation(final Class<? extends Annotation> annotation)
+//// 通过类上的注解扫描，如.withClassAnnotation(Controller.class)只扫描有controller注解的类中的接口
+//        withClassAnnotation(final Class<? extends Annotation> annotation)
+//        basePackage(final String basePackage) // 根据包路径扫描接口
                 .apis(RequestHandlerSelectors.basePackage("com.kuang.swagger.controller"))
                 //.paths(PathSelectors.ant("/kuang/**")) //过滤什么路径
                 .build();
@@ -60,7 +67,7 @@ public class SwaggerConfig {
     public Docket docket3() {
         return new Docket(DocumentationType.SWAGGER_2).groupName("C");
     }
-
+    // 配置Swagger信息=apiInfo
     private ApiInfo apiInfo() {
         //作者信息
         Contact contact = new Contact("少司命", "http://www.4399.com", "1600767556@qq.com");
