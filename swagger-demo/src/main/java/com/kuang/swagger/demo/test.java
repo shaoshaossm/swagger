@@ -9,6 +9,7 @@ public class test {
     public static void main(String[] args) {
         System.out.println("test1");
         System.out.println("test2----test分支");
+        System.out.println("test2----test分支2");
         System.out.println("test2----master分支2");
     }
 }
